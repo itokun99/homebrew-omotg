@@ -15,34 +15,33 @@ class Omotg < Formula
 
   def caveats
     <<~EOS
-      OMOTG berhasil diinstall!
+      OMOTG installed! Next steps:
 
-      Langkah selanjutnya:
-        1. Buat folder config:
+        1. Create config directory:
            mkdir -p ~/.config/omotg
 
-        2. Copy env template:
+        2. Copy and edit env template:
            cp #{etc}/omotg/env.template ~/.config/omotg/env
 
-        3. Edit ~/.config/omotg/env, isi minimal:
-           - TELEGRAM_BOT_TOKEN (dari @BotFather)
-           - TELEGRAM_WEBHOOK_URL (https://domain-anda:8443/webhook)
-           - TELEGRAM_SECRET_TOKEN (string random)
-           - OPENCODE_SERVER_PASSWORD (string bebas)
+        3. Fill in ~/.config/omotg/env with:
+           - TELEGRAM_BOT_TOKEN (from @BotFather)
+           - TELEGRAM_WEBHOOK_URL (https://your.domain:8443/webhook)
+           - TELEGRAM_SECRET_TOKEN (random string)
+           - OPENCODE_SERVER_PASSWORD (any string)
 
-        4. Generate self-signed TLS cert:
+        4. Generate a self-signed TLS cert:
            openssl req -x509 -nodes -days 365 -newkey rsa:2048 \\
              -keyout ~/.config/omotg/webhook.key \\
              -out ~/.config/omotg/webhook.crt \\
-             -subj "/CN=domain-anda.com" \\
-             -addext "subjectAltName=DNS:domain-anda.com"
+             -subj "/CN=your.domain.com" \\
+             -addext "subjectAltName=DNS:your.domain.com"
 
         5. Set up systemd user services:
-           Lihat README lengkap di #{share}/doc/omotg/README.md
-           atau https://github.com/itokun99/omotg
+           See the full README at #{share}/doc/omotg/README.md
+           or https://github.com/itokun99/omotg
 
-      Webhook: https://domain-anda:8443/webhook
-      MCP SSE: http://127.0.0.1:9090/mcp/sse
+      Webhook endpoint: https://your.domain:8443/webhook
+      MCP SSE endpoint: http://127.0.0.1:9090/mcp/sse
     EOS
   end
 
