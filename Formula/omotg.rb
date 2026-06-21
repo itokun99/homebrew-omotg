@@ -1,8 +1,8 @@
 class Omotg < Formula
   desc "Telegram ↔ OpenCode bridge with MCP SSE server"
   homepage "https://github.com/itokun99/omotg"
-  url "https://github.com/itokun99/omotg/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "6d66781b994eb977c6bf2d9c9da92dc320363a0e2c8fde7897c8d0a1a4b12ac1"
+  url "https://github.com/itokun99/omotg/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "afae12f6215e29e8ce7b8c0777730ba67b9e796caeeb21b1288c51072fd4e748"
   license "CC-BY-NC-4.0"
 
   depends_on "go" => :build
@@ -30,10 +30,10 @@ class Omotg < Formula
            - OPENCODE_SERVER_PASSWORD (any string)
 
         4. Generate a self-signed TLS cert:
-           openssl req -x509 -nodes -days 365 -newkey rsa:2048 \\
-             -keyout ~/.config/omotg/webhook.key \\
-             -out ~/.config/omotg/webhook.crt \\
-             -subj "/CN=your.domain.com" \\
+           openssl req -x509 -nodes -days 365 -newkey rsa:2048 \\\\
+             -keyout ~/.config/omotg/webhook.key \\\\
+             -out ~/.config/omotg/webhook.crt \\\\
+             -subj "/CN=your.domain.com" \\\\
              -addext "subjectAltName=DNS:your.domain.com"
 
         5. Set up systemd user services:
