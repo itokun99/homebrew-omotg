@@ -2,7 +2,7 @@ class Omotg < Formula
   desc "Telegram ↔ OpenCode bridge with MCP SSE server"
   homepage "https://github.com/itokun99/omotg"
   url "https://github.com/itokun99/omotg/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "c8d7d367a0a8f639dab9f98472379a0e57721a1ed07e8ae6e05b8b0b36adba3a"
+  sha256 "0b5bb03204bb488331a6026ed97b5e38c60fa81bc83331466e5e1c884c6541f3"
   license "CC-BY-NC-4.0"
 
   depends_on "go" => :build
