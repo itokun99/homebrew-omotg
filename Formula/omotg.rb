@@ -1,8 +1,8 @@
 class Omotg < Formula
   desc "Telegram ↔ OpenCode bridge with MCP SSE server"
   homepage "https://github.com/itokun99/omotg"
-  url "https://github.com/itokun99/omotg/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "82d92e4747230752f4a652a9ee7e462a77269e47d508faf89642e3ad49f9c5e6"
+  url "https://github.com/itokun99/omotg/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "c23115e8ae3fd6a6031fb44cd2c19b8e97afa35d531c8ec049310df082a24db6"
   license "CC-BY-NC-4.0"
 
   depends_on "go" => :build
@@ -15,7 +15,7 @@ class Omotg < Formula
 
   def caveats
     <<~EOS
-      OMOTG v0.6.0 installed! Next steps:
+      OMOTG v0.7.0 installed! Next steps:
 
         1. Create config directory:
            mkdir -p ~/.config/omotg
